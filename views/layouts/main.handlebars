@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run away home</title>
+</head>
+<body>
+    <h1>Sistema Gerencial</h1>
+    {{#if log}}
+    <header>
+        <nav>
+            <a href="/logout">Logout</a>
+            <a href="/setor">Setor</a>
+            <a href="/atividade">Atividade</a>
+            <a>Usuário: {{nome_gerente}}</a> 
+        </nav>
+    </header>
+    {{else}}
+    <header>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+    {{/if}}
+    <main>
+        {{{body}}}
+    </main>
+</body>
+</html>
